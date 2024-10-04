@@ -30,6 +30,16 @@ const fromYenToPound = function(valueInYen) {
     return valueInPounds;
 }
 
+function fromEuroToPound (valueInEuros){
+    let valueInDollar = fromEuroToDollar(valueInEuros);
+    let valueInYen = fromDollarToYen(valueInDollar);
+    let valueInPounds = fromYenToPound(valueInYen);
+
+    return valueInPounds;
+}
+
+console.log("1 euro = " + fromEuroToPound(1) + " pounds");
+
 // This is my function that sums two numbers
 const sum = (a,b) => {
     return a + b
