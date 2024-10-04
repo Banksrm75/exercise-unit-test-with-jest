@@ -1,14 +1,42 @@
-// Import the function sum from the app.js file
+// Test sum() function from the app.js file
 const { sum } = require('./app.js');
-
-// Start your first test
 test('adds 14 + 9 to equal 23', () => {
-    // Inside the test we call our sum function with 2 numbers
+    // Inside the test we call our sum() function with 2 numbers
     let total = sum(14, 9);
 
     // We expect the sum of those 2 numbers to be 23
     expect(total).toBe(23);
 });
+
+// Test difference() function from the app.js file
+const { difference } = require('./app.js');
+test('subtracts 9 from 14 to equal 5', () => {
+
+    // Inside the test we call our difference() function with 2 numbers
+    expect (difference(14, 9)). toBe(5);
+
+});
+
+// Test product() function from the app.js file
+const { product } = require('./app.js');
+test('multiplies 5 and 8 to equal 40', () => {
+
+    // Inside the test we call our product() function with 2 numbers
+    expect (product(5, 8)). toBe(40);
+    
+});
+
+// Test quotient() function from the app.js file
+const { quotient } = require('./app.js');
+test('divides 45 by 9 to equal 5', () => {
+
+    // Inside the test we call our quotient() function with 2 numbers
+    expect (quotient(45, 9)). toBe(5);
+    
+});
+
+
+
 
 test("One euro should be 1.07 dollars", function() {
     // Import the function from app.js

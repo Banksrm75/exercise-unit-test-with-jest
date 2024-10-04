@@ -40,14 +40,36 @@ function fromEuroToPound (valueInEuros){
 
 console.log("1 euro = " + fromEuroToPound(1) + " pounds");
 
-// This is my function that sums two numbers
-const sum = (a,b) => {
-    return a + b
+//This is my function that sums two numbers
+const sum = (addend1,addend2) => {
+    return addend1 + addend2;
+}
+
+const difference = (beginningNumber, AmountSubtracted) => {
+    return beginningNumber - AmountSubtracted;
+}
+
+const product = (factor1, factor2) => {
+    return factor1 * factor2
+}
+
+const quotient = (beginningNumber, dividedBy) => {
+    return beginningNumber / dividedBy
 }
 
 // Just a console log for ourselves
-console.log(sum(7,3))
+console.log(sum(20,45))
+console.log(difference(52,13))
+console.log(product(7,3))
+console.log(quotient(24,8))
 
 // Export the function(s) to be used on other files (multiple functions are separated by commas)
 // (similar to the keyword "export" when using webpack)
-module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound }
+module.exports = { 
+    sum, 
+    difference,
+    product,
+    quotient, 
+    fromEuroToDollar, 
+    fromDollarToYen, 
+    fromYenToPound }
